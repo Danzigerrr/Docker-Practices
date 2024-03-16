@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  firstpage:
+    image: nginx:1.25.2
+    volumes:
+      - "./page-1/src:/usr/share/nginx/html/firstpage"
+    # ports:
+    #   - "8801:80"
+
+  secondpage:
+    image: nginx:1.25.2
+    volumes:
+      - "./page-2/src:/usr/share/nginx/html/secondpage"
+    # ports:
+    #   - "8802:80"
+  
+  reverse-proxy:
+    image: nginx:1.25.2
+    volumes:
+      - "./reverse-proxy/app.conf:/etc/nginx/conf.d/app.conf"
+    ports:
+      - "8803:8803"
+  
+    
