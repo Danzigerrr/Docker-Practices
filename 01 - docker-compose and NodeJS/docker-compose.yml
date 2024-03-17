@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mongo_db:
+    container_name: mongo_db
+    image: mongo:3
+    restart: always
+    volumes:
+      - mongo_db:/data/db
+
+  web:
+    build: .
+    ports:
+      - "4000:3000"
+    environment:
+      - MONGO_IP=mongo_db
+    depends_on:
+      - mongo_db
+    working_dir: /work
+    volumes:
+      - .:/work
+    command: node /work/server.js
+
+volumes:
+  mongo_db: {}
+  
+
