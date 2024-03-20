@@ -1,2 +1,5 @@
 
 /01 - docker-compose and NodeJS/node_modules
+*.pyc
+/Django/mysite/hello_world/migrations
+/Django/venv
