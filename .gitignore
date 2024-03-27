@@ -3,3 +3,10 @@
 *.pyc
 /Django/mysite/hello_world/migrations
 /Django/venv
+/microservices - spring boot and rabbitmq/.idea
+/microservices - spring boot and rabbitmq/sender/.idea
+/microservices - spring boot and rabbitmq/receiver/.idea
+microservices - spring boot and rabbitmq/receiver/receiver.iml
+microservices - spring boot and rabbitmq/sender/sender.iml
+microservices - spring boot and rabbitmq/receiver/HELP.md
+microservices - spring boot and rabbitmq/sender/HELP.md
